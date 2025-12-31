@@ -37,7 +37,7 @@ def calculate_bounce_count(initial_height):
     """
 <<<<<<< HEAD
     # TODO: Implement using calculate_bounce_height and is_ball_stopped 
-    bounce_count = 
+    bounce_count = h
     total
 # Test your code here
 print("Testing Bouncing Ball Simulation...")

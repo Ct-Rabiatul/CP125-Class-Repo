@@ -1,2 +1,2 @@
-def has_adjacent_seats(seats):
+def has_adjacent_seats(seats,):
     pass
