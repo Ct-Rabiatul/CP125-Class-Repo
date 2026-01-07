@@ -13,21 +13,23 @@ def calculate_average(scores):
     total = 0
     for i in range(len(scores)):
         total = total + scores[i]
-    return total / len(scores)
+    average = total / len(scores)
+    return average
 
 
 def count_passing(scores, passing_mark):
     count = 0
-    for i in range(len(scores)):
+    for i in range (len(scores)):
+        
         if scores[i] >= passing_mark:
             count = count + 1
-            return count
+        
     return count
 
 
 def get_class_summary(scores, passing_mark):
     average = calculate_average(scores)
-    passing = count_passing(passing_mark, scores)
+    passing = count_passing(scores, passing_mark)
     failed = len(scores) - passing
     return (average, passing, failed)
 
