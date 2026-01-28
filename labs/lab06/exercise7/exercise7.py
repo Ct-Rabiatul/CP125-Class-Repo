@@ -11,4 +11,11 @@ def manage_playlist(current_playlist, add_songs, import_playlist, banned_songs):
     Returns:
         int: Count of final songs in playlist
     """
-    pass
+    add_songs_set = set(add_songs)
+
+    for song in add_songs_set:
+
+        current_playlist.add(song)
+
+    import_playlist.add(current_playlist())
+    import_playlist.disacrd(banned_songs())

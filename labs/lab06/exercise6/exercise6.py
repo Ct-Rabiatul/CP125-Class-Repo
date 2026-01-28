@@ -10,4 +10,17 @@ def manage_roster(enrolled, drop_requests, waitlist):
     Returns:
         int: Count of final enrolled students
     """
-    pass
+    drop_requests_set = set(drop_requests)
+    for name in drop_requests_set:
+
+        enrolled.discard(name)
+
+    check = len(enrolled)
+    if check < 5:
+        insert= waitlist.pop()
+        enrolled.add(insert)
+
+    
+
+
+    return len(enrolled)
