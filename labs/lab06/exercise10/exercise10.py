@@ -1,6 +1,7 @@
 def get_unique_attendees(attendance_logs):
     """Extract set of all unique attendee IDs."""
-    pass
+    attendance_logs_set = set(attendance_logs)
+    return attendance_logs_set
 
 def count_unique_events(attendance_logs, attendee_id):
     """Count how many unique events this attendee attended."""

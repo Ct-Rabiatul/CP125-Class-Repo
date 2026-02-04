@@ -12,10 +12,14 @@ def manage_playlist(current_playlist, add_songs, import_playlist, banned_songs):
         int: Count of final songs in playlist
     """
     add_songs_set = set(add_songs)
-
+    
     for song in add_songs_set:
 
         current_playlist.add(song)
 
-    import_playlist.add(current_playlist())
-    import_playlist.disacrd(banned_songs())
+    songs = current_playlist | import_playlist
+    unbanned_song = songs - banned_songs
+
+    while len(unbanned_song) > 6:
+        unbanned_song.pop()
+    return len(unbanned_song)
