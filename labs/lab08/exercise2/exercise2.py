@@ -14,9 +14,19 @@ def merge_lists(file1, file2, output_file):
         int: count of unique names
     """
     # TODO: Implement this function
-    pass
+    list1 = open(file1, "r")
+    list2 = open(file2, "r")
+    
 
+    list1_name = set(list1.readlines())
+    list2_name = set(list2.readlines())
+
+    result = list1_name | list2_name
+    print(set(sort = sorted(result)))
+
+    f = open(output_file, "w")
+    
 
 # Test your code here
-result = merge_lists("data/list1.txt", "data/list2.txt", "data/merged.txt")
+result = merge_lists("CP125-Class-Repo/labs/lab08/exercise2/data/list1.txt", "CP125-Class-Repo/labs/lab08/exercise2/data/list2.txt", "CP125-Class-Repo/labs/lab08/exercise2/data/merged.txt")
 print(f"Unique names: {result}")

@@ -1,17 +1,19 @@
 # Demo: Writing text files
 
-# Write data to file
-f = open("data/output.txt", "w")
-f.write("Ali: 85\n")
-f.write("Sara: 92\n")
-f.write("Ahmad: 78\n")
+# Read
+f = open("scores.txt", "r")
+lines = f.readlines()
 f.close()
 
-print("Data written to data/output.txt")
+# Process
+scores = []
+for line in lines:
+    score = int(line.strip())
+    scores.append(score)
 
-# Read it back to verify
-f = open("data/output.txt", "r")
-content = f.read()
-print("\nFile contents:")
-print(content)
+average = sum(scores) / len(scores)
+
+# Write
+f = open("report.txt", "w")
+f.write(f"Average: {average}\n")
 f.close()
