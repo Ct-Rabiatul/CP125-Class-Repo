@@ -13,7 +13,8 @@ def filter_passing_scores(input_file, output_file):
         int: count of passing students
     """
     # TODO: Implement this function
-    pass
+    f = open(input_file)
+    
 
 
 # Test your code here

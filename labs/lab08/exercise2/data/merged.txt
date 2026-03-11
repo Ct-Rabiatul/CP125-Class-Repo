@@ -1,1 +1,5 @@
-['Alice\n', 'Bob\n', 'Charlie\n', 'David\n', 'Eve\n']
+Alice
+Bob
+Charlie
+David
+Eve

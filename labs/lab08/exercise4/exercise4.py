@@ -13,7 +13,7 @@ def calculate_final_grades(input_file, output_file):
         float: average of all final grades
     """
     # TODO: Implement this function
-    pass
+    
 
 
 # Test your code here

@@ -22,10 +22,18 @@ def merge_lists(file1, file2, output_file):
     list2_name = set(list2.readlines())
 
     result = list1_name | list2_name
-    print(set(sort = sorted(result)))
+    result_list = list(result)
+    result_sort = sorted(result_list)
+
 
     f = open(output_file, "w")
-    
+    f.writelines(result_sort)
+
+    list1.close()
+    list2.close()
+    f.close()
+
+    return len(result)
 
 # Test your code here
 result = merge_lists("CP125-Class-Repo/labs/lab08/exercise2/data/list1.txt", "CP125-Class-Repo/labs/lab08/exercise2/data/list2.txt", "CP125-Class-Repo/labs/lab08/exercise2/data/merged.txt")
