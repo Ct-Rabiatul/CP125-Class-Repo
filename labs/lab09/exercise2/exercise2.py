@@ -2,4 +2,23 @@ import pandas as pd
 
 
 def compare_averages(filename):
-    pass
+    
+    df = pd.read_csv(filename)
+
+    math_avg = df["Math"].mean()
+    science_avg = df["Science"].mean()
+    eng_avg = df["English"].mean()
+
+    subj = []
+    for i in subj:
+        subj.append(i)
+    
+    best_subj = max(subj)
+
+    worst_subj = min(subj)
+
+    return best_subj, worst_subj
+
+    
+
+
