@@ -17,8 +17,13 @@ def compare_averages(filename):
 
     worst_subj = min(subj)
 
-    return best_subj, worst_subj
-
+    return {
+        "Math" : math_avg ,
+        "Science" : science_avg ,
+        "English" : eng_avg ,
+        "best_subject" : best_subj ,
+        "worst_subject" : worst_subj
+    }
     
 
 
